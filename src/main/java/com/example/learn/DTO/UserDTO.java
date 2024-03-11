@@ -1,6 +1,7 @@
 package com.example.learn.DTO;
 
 
+import com.example.learn.entity.Rating;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -17,5 +18,5 @@ public class UserDTO {
     private String email;
 
 
-    private String rating;
+    private Rating rating;
 }
