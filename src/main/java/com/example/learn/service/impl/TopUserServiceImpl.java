@@ -1,8 +1,10 @@
-package com.example.learn.service;
+package com.example.learn.service.impl;
 
 import com.example.learn.entity.Rating;
 import com.example.learn.entity.TopUser;
 import com.example.learn.repository.TopUserRepository;
+import com.example.learn.service.RatingService;
+import com.example.learn.service.TopUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -10,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 @RequiredArgsConstructor
-public class TopUserServiceImpl implements TopUserService{
+public class TopUserServiceImpl implements TopUserService {
 
     private final TopUserRepository topUserRepository;
     private final RatingService ratingService;

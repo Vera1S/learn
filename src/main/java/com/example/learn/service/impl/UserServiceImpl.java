@@ -1,7 +1,8 @@
-package com.example.learn.service;
+package com.example.learn.service.impl;
 
 import com.example.learn.repository.UserRepository;
 import com.example.learn.entity.User;
+import com.example.learn.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

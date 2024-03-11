@@ -1,7 +1,8 @@
-package com.example.learn.service;
+package com.example.learn.service.impl;
 
 import com.example.learn.entity.User;
 import com.example.learn.repository.RatingRepository;
+import com.example.learn.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;

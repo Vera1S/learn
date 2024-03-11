@@ -1,7 +1,8 @@
-package com.example.learn.service;
+package com.example.learn.service.impl;
 
 import com.example.learn.DTO.RatingDTO;
 import com.example.learn.entity.Rating;
+import com.example.learn.service.RatingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
