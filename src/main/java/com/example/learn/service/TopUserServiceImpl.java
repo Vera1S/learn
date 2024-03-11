@@ -18,8 +18,11 @@ public class TopUserServiceImpl implements TopUserService{
 
     @Override
     public List<TopUser> getAllSortDesc() {
-        List<TopUser> topUsers = topUserRepository.findAll(Sort.Direction.DESC, "User");
-        return null;
+        List<TopUser> topUsers = topUserRepository.findAll(Sort.Direction.DESC, "User", Sort.Direction.DESC, "rating");
+        return topUserRepository.findAll();
+    }
+    public List<TopUser> getTopUsers(int limit) {
+        return topUserRepository.findTopNByOrderByRatingDesc(limit);
     }
 
     @Override

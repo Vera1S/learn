@@ -26,7 +26,6 @@ public class UserController {
         UserDTO userDTO = new UserDTO(user.get().getId(), user.get().getName(), user.get().getEmail(),
                 user.get().getRating());
         return userDTO;
-
     }
     @GetMapping(value = "/all")
     public ResponseEntity <Collection<UserDTO>> getAllUser(){

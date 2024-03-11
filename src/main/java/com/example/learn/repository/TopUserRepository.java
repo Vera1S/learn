@@ -10,6 +10,8 @@ import java.util.List;
 @Repository
 public interface TopUserRepository extends JpaRepository<TopUser, Long> {
 
-  // @Query(value = "SELECT * FROM TopUser ORDER BY T")
+  List<TopUser> findTopNByOrderByRatingDesc(int limit);
+
+    // @Query(value = "SELECT * FROM TopUser ORDER BY T")
 
 }

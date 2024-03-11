@@ -11,6 +11,8 @@ public interface TopUserService {
 
     List<TopUser> getAllSortDesc();
 
+    List<TopUser> getTopUsers(int limit);
+
     void deleteById(Long id);
 
    List<TopUser> getAllByMaxRating(Rating rating);
