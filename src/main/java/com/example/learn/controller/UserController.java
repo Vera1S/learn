@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,7 +22,10 @@ public class UserController {
 
     @GetMapping(value = "/id")
     public UserDTO getById(@PathVariable(value = "id")Long id){
-        List<User> user = userService.findById(id);
+        Optional<User> user = userService.findById(id);
+        UserDTO userDTO = new UserDTO(user.get().getId(), user.get().getName(), user.get().getEmail(),
+                user.get().getRating());
+        return userDTO;
 
     }
     @GetMapping(value = "/all")
